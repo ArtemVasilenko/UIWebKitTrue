@@ -26,9 +26,8 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Du9-lC-iR2">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Du9-lC-iR2">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem systemItem="rewind" id="v27-nF-Mql">
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -58,21 +57,32 @@
                                 <nil key="textColor"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="IbH-Tc-Dqa">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="mWc-oe-4dl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="AZ8-uH-Xl9"/>
-                            <constraint firstItem="o5y-6A-4Xo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="C1D-Ai-g6a"/>
-                            <constraint firstItem="mWc-oe-4dl" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="PTI-pn-0jV"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o5y-6A-4Xo" secondAttribute="trailing" constant="16" id="Re5-rI-mBZ"/>
-                            <constraint firstItem="mWc-oe-4dl" firstAttribute="top" secondItem="o5y-6A-4Xo" secondAttribute="bottom" constant="8" id="Y1h-8b-hJK"/>
-                            <constraint firstItem="o5y-6A-4Xo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YSf-0M-3re"/>
-                            <constraint firstItem="mWc-oe-4dl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nIq-Tq-QAL"/>
+                            <constraint firstItem="IbH-Tc-Dqa" firstAttribute="top" secondItem="o5y-6A-4Xo" secondAttribute="bottom" constant="265" id="9KE-af-JKI"/>
+                            <constraint firstItem="Du9-lC-iR2" firstAttribute="top" secondItem="IbH-Tc-Dqa" secondAttribute="bottom" constant="271" id="Bwp-rs-jrw"/>
+                            <constraint firstItem="Du9-lC-iR2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Hce-wz-joW"/>
+                            <constraint firstItem="o5y-6A-4Xo" firstAttribute="centerX" secondItem="mWc-oe-4dl" secondAttribute="centerX" id="NMF-zr-zNA"/>
+                            <constraint firstItem="Du9-lC-iR2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NOS-gm-HA8"/>
+                            <constraint firstItem="IbH-Tc-Dqa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="169" id="O0P-hP-dq8"/>
+                            <constraint firstItem="mWc-oe-4dl" firstAttribute="bottom" secondItem="Du9-lC-iR2" secondAttribute="bottom" id="W7l-Ks-8MV"/>
+                            <constraint firstItem="o5y-6A-4Xo" firstAttribute="centerX" secondItem="IbH-Tc-Dqa" secondAttribute="centerX" id="dAs-2z-Evb"/>
+                            <constraint firstItem="o5y-6A-4Xo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="eHE-jU-K6T"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IbH-Tc-Dqa" secondAttribute="trailing" constant="169" id="eWu-XC-KbJ"/>
+                            <constraint firstItem="mWc-oe-4dl" firstAttribute="leading" secondItem="Du9-lC-iR2" secondAttribute="leading" id="mqG-nV-UWq"/>
+                            <constraint firstItem="Du9-lC-iR2" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="qiR-mD-Zm2"/>
+                            <constraint firstItem="mWc-oe-4dl" firstAttribute="top" secondItem="o5y-6A-4Xo" secondAttribute="bottom" constant="8" symbolic="YES" id="rci-fB-gaP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="goBack" destination="Du9-lC-iR2" id="bv6-JH-jw0"/>
+                        <outlet property="activityIndicator" destination="IbH-Tc-Dqa" id="Bju-5v-y7e"/>
+                        <outlet property="goBack" destination="v27-nF-Mql" id="Jb8-lV-fdH"/>
                         <outlet property="goForward" destination="qXK-wN-qpq" id="qIj-hl-tXi"/>
                         <outlet property="myWebKit" destination="mWc-oe-4dl" id="ZVv-mI-lNg"/>
                         <outlet property="refresh" destination="kmB-7t-IdS" id="gxY-Ze-trF"/>
