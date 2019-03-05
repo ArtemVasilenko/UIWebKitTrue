@@ -46,6 +46,9 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="BrP-5Q-7UO"/>
                                     <barButtonItem systemItem="refresh" id="kmB-7t-IdS">
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="reload:" destination="BYZ-38-t0r" id="Msx-AI-Cyh"/>
+                                        </connections>
                                     </barButtonItem>
                                 </items>
                                 <color key="barTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

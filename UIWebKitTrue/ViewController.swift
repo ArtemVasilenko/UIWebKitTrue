@@ -3,7 +3,7 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController, UITextFieldDelegate{
+class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var myWebKit: WKWebView!
     @IBOutlet weak var goBack: UIToolbar!
@@ -18,21 +18,23 @@ class ViewController: UIViewController, UITextFieldDelegate{
         
     }
     
-    
     @IBAction func goBackAction(_ sender: UIBarButtonItem) {
+        myWebKit.goBack()
+    }
+    @IBAction func goForwardAction(_ sender: UIBarButtonItem) {
+        myWebKit.goForward()
+    }
+    @IBAction func reload(_ sender: UIBarButtonItem) {
+        myWebKit.reload()
     }
     
-    @IBAction func goForwardAction(_ sender: UIBarButtonItem) {
-    }
     
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
-
         guard let url = URL(string: textField.text!) else {
             return
         }
         let requset = URLRequest(url: url)
         self.myWebKit.load(requset)
-        
     }
     
     
