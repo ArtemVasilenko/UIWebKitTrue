@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIWebKitTrue" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mWc-oe-4dl">
-                                <rect key="frame" x="0.0" y="58" width="375" height="609"/>
+                                <rect key="frame" x="0.0" y="82" width="375" height="696"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -27,7 +27,11 @@
                                 </wkWebViewConfiguration>
                             </wkWebView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Du9-lC-iR2">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="734" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="enn-Js-OBY"/>
+                                    <constraint firstAttribute="width" constant="375" id="tF6-Q2-9J1"/>
+                                </constraints>
                                 <items>
                                     <barButtonItem systemItem="rewind" id="v27-nF-Mql">
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -53,30 +57,39 @@
                                 <color key="barTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </toolbar>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="www:" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o5y-6A-4Xo">
-                                <rect key="frame" x="16" y="20" width="343" height="30"/>
+                                <rect key="frame" x="16" y="44" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Gbl-cH-brW"/>
+                                    <constraint firstAttribute="width" constant="343" id="lrl-wL-bUu"/>
+                                </constraints>
                                 <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="IbH-Tc-Dqa">
-                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <rect key="frame" x="169" y="339" width="37" height="124"/>
                                 <color key="color" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="IbH-Tc-Dqa" firstAttribute="top" secondItem="o5y-6A-4Xo" secondAttribute="bottom" constant="265" id="9KE-af-JKI"/>
-                            <constraint firstItem="Du9-lC-iR2" firstAttribute="top" secondItem="IbH-Tc-Dqa" secondAttribute="bottom" constant="271" id="Bwp-rs-jrw"/>
-                            <constraint firstItem="Du9-lC-iR2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Hce-wz-joW"/>
-                            <constraint firstItem="o5y-6A-4Xo" firstAttribute="centerX" secondItem="mWc-oe-4dl" secondAttribute="centerX" id="NMF-zr-zNA"/>
-                            <constraint firstItem="Du9-lC-iR2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NOS-gm-HA8"/>
-                            <constraint firstItem="IbH-Tc-Dqa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="169" id="O0P-hP-dq8"/>
-                            <constraint firstItem="mWc-oe-4dl" firstAttribute="bottom" secondItem="Du9-lC-iR2" secondAttribute="bottom" id="W7l-Ks-8MV"/>
-                            <constraint firstItem="o5y-6A-4Xo" firstAttribute="centerX" secondItem="IbH-Tc-Dqa" secondAttribute="centerX" id="dAs-2z-Evb"/>
-                            <constraint firstItem="o5y-6A-4Xo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="eHE-jU-K6T"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IbH-Tc-Dqa" secondAttribute="trailing" constant="169" id="eWu-XC-KbJ"/>
-                            <constraint firstItem="mWc-oe-4dl" firstAttribute="leading" secondItem="Du9-lC-iR2" secondAttribute="leading" id="mqG-nV-UWq"/>
-                            <constraint firstItem="Du9-lC-iR2" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="qiR-mD-Zm2"/>
-                            <constraint firstItem="mWc-oe-4dl" firstAttribute="top" secondItem="o5y-6A-4Xo" secondAttribute="bottom" constant="8" symbolic="YES" id="rci-fB-gaP"/>
+                            <constraint firstItem="mWc-oe-4dl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2Uj-TS-Z7M"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IbH-Tc-Dqa" secondAttribute="trailing" constant="169" id="6IQ-H8-mZD"/>
+                            <constraint firstItem="mWc-oe-4dl" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Ddv-CE-C8y"/>
+                            <constraint firstItem="o5y-6A-4Xo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Khp-wy-RFg"/>
+                            <constraint firstItem="IbH-Tc-Dqa" firstAttribute="top" secondItem="o5y-6A-4Xo" secondAttribute="bottom" constant="265" id="Nrp-ae-kgP"/>
+                            <constraint firstItem="o5y-6A-4Xo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="PcD-86-Qbf"/>
+                            <constraint firstItem="mWc-oe-4dl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ql6-V9-eZv"/>
+                            <constraint firstItem="Du9-lC-iR2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="SG5-wc-ep1"/>
+                            <constraint firstItem="Du9-lC-iR2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WAN-eu-sh4"/>
+                            <constraint firstItem="mWc-oe-4dl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="av6-7a-0GO"/>
+                            <constraint firstItem="Du9-lC-iR2" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ayw-3G-VGS"/>
+                            <constraint firstItem="mWc-oe-4dl" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="dZT-E5-y9w"/>
+                            <constraint firstItem="mWc-oe-4dl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="g1K-1O-bLS"/>
+                            <constraint firstItem="mWc-oe-4dl" firstAttribute="top" secondItem="o5y-6A-4Xo" secondAttribute="bottom" constant="8" id="hEM-xn-M19"/>
+                            <constraint firstItem="IbH-Tc-Dqa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="169" id="jFi-Fa-xk6"/>
+                            <constraint firstItem="Du9-lC-iR2" firstAttribute="top" secondItem="IbH-Tc-Dqa" secondAttribute="bottom" constant="271" id="maF-0Y-2Cd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o5y-6A-4Xo" secondAttribute="trailing" constant="16" id="y9e-NH-KZQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

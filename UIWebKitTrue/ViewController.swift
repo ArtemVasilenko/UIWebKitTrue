@@ -37,7 +37,6 @@ final class ViewController: UIViewController, UITextFieldDelegate {
         guard let url = URL(string: textField.text!) else { return }
         let requset = URLRequest(url: url)
         self.myWebKit.load(requset)
-        print("url = ", url.port, url.user, url.password, url.scheme)
     }
     
      func textFieldShouldReturn(_ textField: UITextField) -> Bool {
